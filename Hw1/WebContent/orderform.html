@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>蛋糕訂購表單</title>
+<style>
+table {
+	margin: 25px;
+	font-family: DFKai-sb;
+	background-color: rgb(252, 238, 233);
+	border-collapse: collapse;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td {
+	border: 1px solid black;
+}
+
+.st {
+	margin: 5px;
+}
+
+.st1 {
+	margin: 5px;
+	text-align: center;
+}
+
+textarea {
+	resize: none;
+	/* 固定 */
+}
+</style>
+</head>
+<body>
+	<form action="./OrderServlet" method="post">
+		<table>
+			<tr>
+				<td>
+					<div class="st"
+						style="font-family: Microsoft JhengHei; text-align: center">
+						<h2>蛋糕訂購表單(中壢門市)</h2>
+					</div>
+					<div class="st">
+						<label class="t1" for="n">訂購人姓名：</label> <input autofocus type="text" id="n"
+							name="name" required />
+					</div>
+					<div class="st">
+						<label class="t1" for="phone">連絡電話：</label> <input type="text"
+							id="phone" name="phone" maxlength="10" required />
+					</div>
+					<div class="st">
+						<label class="t1" for="email">E-mail：</label> <input type="text"
+							id="email" name="email" required />
+					</div>
+					<div class="st">
+						<label class="t1" for="">領取方式：</label>
+					</div>
+					<div class="st">
+						<input type="radio" name="t" value="店內自取，預計領取時間:" id="tk" /> <label
+							class="t1" for="tk">店內自取，</label><label for="tt">領取時間:</label> <input
+							type="datetime-local" name="dt1">
+					</div>
+					<div class="st">
+						<input type="radio" name="t" value="宅配至" id="th" /> <label
+							class="t1" for="th">宅配至:</label> <label class="t1" for=""></label>
+						<input type="text" id="th" name="address" /> (冷藏宅配費用為160元)
+						<!-- <p>(冷藏宅配費用一般為160元)</p> -->
+					</div>
+					<div class="st">
+						<label class="t1">蛋糕主題:</label> <input type="radio" name="topic"
+							value="哆拉A夢" id="a" /><label for="a">哆拉A夢</label> <input
+							type="radio" name="topic" value="Hello Kitty" id="hk" /><label
+							for="hk">Hello Kitty</label> <input type="radio" name="topic"
+							value="海綿寶寶" id="spg" /><label for="spg">海綿寶寶</label> <input
+							type="radio" name="topic" value="藏次郎" id="br" /><label for="br">藏次郎</label>
+						<input type="radio" name="topic" value="其他(請填寫)" id="ot" /><label
+							for="ot">其他(請填寫):</label> <label class="t1" for=""></label> <input
+							type="text" id="ot" name="other" /><br /> (依主題難易度收費)
+					</div>
+					<div class="st">
+						<label class="t1">蛋糕口味選擇:</label> <input type="radio" name="cake"
+							value="原味" id="ori" /><label for="ori">原味</label> <input
+							type="radio" name="cake" value="香草" id="van" /><label for="van">香草</label>
+						<input type="radio" name="cake" value="巧克力" id="cho" /><label
+							for="cho">巧克力</label> <input type="radio" name="cake" value="草莓"
+							id="straw" /><label for="straw">草莓</label>
+					</div>
+					<div class="st">
+						<label class="t1">內餡選擇:</label> <label for="pd"> <input
+							type="checkbox" name="stuf" value="布丁" id="pd" />布丁
+						</label> <label for="bl"> <input type="checkbox" name="stuf"
+							value="莓果醬" id="bl" />莓果醬
+						</label> <label for="pch"> <input type="checkbox" name="stuf"
+							value="當季水果" id="pch" />當季水果
+						</label> <label for="taro"> <input type="checkbox" name="stuf"
+							value="芋頭" id="taro" />芋頭
+						</label> <label for="panna"> <input type="checkbox" name="stuf"
+							value="奶酪" id="panna" />奶酪
+						</label>
+					</div>
+					<div class="st">
+						<label class="t1">是否為生日蛋糕:</label> <input type="radio" name="yn"
+							value="是" id="yes" /><label for="yes">是</label> <input
+							type="radio" name="yn" value="是" id="no" /><label for="no">否</label>
+					</div>
+					<div class="st">
+						<label class="t1">蠟燭數字:</label> <input type="text" name="number"
+							placeholder="ex.18、??" maxlength="3" />
+					</div>
+					<div class="st">
+						<label class="t1" for="nd">特別需求(斟酌加收費用):</label><br />
+						<textarea id="nd" name="spnd" cols="35" rows="5"></textarea>
+					</div> <br /> <br />
+					<div class="st">
+						<p>確認資訊正確後請點選送出喔，感謝您的配合。</p>
+					</div>
+					<div class="st1">
+						<input type="reset" value="取消" /> <input type="submit" value="送出" />
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

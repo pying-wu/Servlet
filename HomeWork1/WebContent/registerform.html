@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>報名表單</title>
+</head>
+<body>
+	<form action="./RegisterFormServlet" method="get">
+	  <label for="name">姓名：</label><br>
+	  <input type="text" id="name" name="name"><br>
+	  <label for="school">畢業學校：</label><br>
+	  <input type="text" id="school" name="school"><br>
+	  <label for="department">畢業科系：</label><br>
+	  <input type="text" id="department" name="department"><br>
+	  <br>性別：<br>
+	  <input type="radio" id="male" name="gender" value="男性"><br>
+      <label for="male">男性</label><br>
+      <input type="radio" id="female" name="gender" value="女性"><br>
+      <label for="female">女性</label><br>
+      <br>交通工具：<br>
+      <input type="checkbox" id="vehicle1" name="vehicle" value="腳踏車"><br>
+      <label for="vehicle">腳踏車</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle" value="汽車"><br>
+      <label for="vehicle">汽車</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle" value="火車"><br>
+      <label for="vehicle">火車</label><br>
+      <input type="submit" value="送出">
+    </form>
+</body>
+</html>
